@@ -6,6 +6,10 @@ body{
     background-color: lightgrey;
 }
 
+.on {
+    background-color: red;
+}
+
 .binary-unit {
     width: 100%;
     position: relative;
