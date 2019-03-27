@@ -1,3 +1,15 @@
+@font-face{
+    font-family: 'digital_dreamregular';
+    src: url('../font/DIGITALDREAM-webfont.eot');
+    src: url('../font/DIGITALDREAM-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/DIGITALDREAM-webfont.woff') format('woff'),
+         url('../font/DIGITALDREAM-webfont.ttf') format('truetype'),
+         url('../font/DIGITALDREAM-webfont.svg#digital_dreamregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 10em;
+}
+
 body{
     background-color: black;
 }
@@ -19,4 +31,10 @@ body{
     content: "";
     display: block;
     padding-bottom: 100%;
+}
+
+h1 {
+    font-size: 5em;
+    color: red;
+    font-family: digital_dreamregular;
 }
