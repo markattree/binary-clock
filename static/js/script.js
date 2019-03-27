@@ -1,5 +1,4 @@
 function updateTime() {
-    console.log("tick");
     var date = new Date();
     var decimalHours = date.getHours();
     var decimalMinutes = date.getMinutes();
@@ -14,9 +13,6 @@ function updateTime() {
 
     for (var index = 0; index < binarySeconds.length; index++) {
         var elementName = "s" + figure;
-
-        console.log(binarySeconds);
-        console.log(decimalSeconds);
 
         if (binarySeconds.charAt(index) === "1") {
             document.getElementById(elementName).classList.add("on");
@@ -48,9 +44,6 @@ function updateTime() {
     for (var index = 0; index < binaryHours.length; index++) {
         var elementName = "h" + figure2;
 
-        console.log(elementName);
-        console.log(binaryHours);
-
         if (binaryHours.charAt(index) === "1") {
             document.getElementById(elementName).classList.add("on");
             document.getElementById(elementName).classList.remove("off");
@@ -61,6 +54,10 @@ function updateTime() {
 
         figure2 = figure2 / 2;
     }
+
+    document.getElementById("decimal-hours").innerHTML = decimalHours
+    document.getElementById("decimal-mins").innerHTML = decimalMinutes
+    document.getElementById("decimal-secs").innerHTML = decimalSeconds
 
     setTimeout(updateTime, 1000);
 }
