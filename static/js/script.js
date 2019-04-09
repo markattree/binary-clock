@@ -4,9 +4,9 @@ function updateTime() {
     var decimalMinutes = date.getMinutes();
     var decimalSeconds = date.getSeconds();
 
-    var binarySeconds = (decimalSeconds).toString(2).padStart(6, "0");
-    var binaryMinutes = (decimalMinutes).toString(2).padStart(6, "0");
-    var binaryHours = (decimalHours).toString(2).padStart(5, "0");
+    binarySeconds = padBinaryNumber(decimalSeconds.toString(2), 6);
+    binaryMinutes = padBinaryNumber(decimalMinutes.toString(2), 6);
+    binaryHours = padBinaryNumber(decimalHours.toString(2), 5);
 
     updateBinaryRow(binarySeconds, 32, "s");
     updateBinaryRow(binaryMinutes, 32, "m");
@@ -55,6 +55,14 @@ function isAOne(digit) {
 
 function getElementName(prefix, suffix) {
     return prefix + suffix;
+}
+
+function padBinaryNumber(number, desiredLength) {
+    while (number.length < desiredLength) {
+        number = "0" + number
+    }
+
+    return number;
 }
 
 
